@@ -3,9 +3,16 @@ module.exports = (function () {
 
     var AppRouter = Backbone.Router.extend({
         routes: {
-            ':page/:id': 'showPage'
+            ':page': 'showPage',
+            ':page/:id': 'showPage2'
         },
-        showPage: function (page, id) {
+        showPage: function (page) {
+            // console.log(page)
+            Backbone.Events.trigger(page);
+        },
+        showPage2: function (page, id) {
+            // console.log(id)
+            // console.log(page)
             Backbone.Events.trigger(page+':'+id);
         },
     });

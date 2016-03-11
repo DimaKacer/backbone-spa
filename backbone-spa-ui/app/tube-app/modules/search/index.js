@@ -4,13 +4,8 @@ module.exports = (function() {
     var SearchView = require('./views/searchView');
 
     var SearchModule = function () {
-
-        var searchView = function () {
-            return new SearchView();
-        }
-
         return {
-            view: searchView()
+            searchView: new SearchView
         };
     };
 

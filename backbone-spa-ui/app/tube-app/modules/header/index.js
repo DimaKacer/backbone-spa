@@ -5,10 +5,14 @@ module.exports = (function() {
 
     var HeaderModule = function () {
         return {
-            headerView: new HeaderView()
+            headerView: new HeaderView
         };
     };
 
     return HeaderModule;
 
 })();
+
+
+
+

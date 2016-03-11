@@ -8,6 +8,7 @@ module.exports = (function () {
         el: '#main-article',
         template: contentTpl,
         initialize: function (options) {
+            console.log(options);
             this.listenTo(Backbone.Events, 'page:home', this.getContentHomePage);
             this.listenTo(Backbone.Events, 'page:my-channel', this.getContentOtherPage);
             this.listenTo(Backbone.Events, 'page:trending', this.getContentOtherPage);

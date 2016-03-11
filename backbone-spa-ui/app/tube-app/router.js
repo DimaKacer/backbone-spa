@@ -11,6 +11,7 @@ module.exports = (function () {
         },
         index: function () {
             console.log('Index in AppRouter');
+            Backbone.Events.trigger('page:home');
         },
         defaultAction: function (actions) {
             this.navigate('#');
